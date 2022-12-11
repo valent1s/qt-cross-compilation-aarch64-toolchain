@@ -11,5 +11,9 @@ wget https://raw.githubusercontent.com/riscv/riscv-poky/master/scripts/sysroot-r
 To configure Qt,
 
 ```console
-~/qtpi-build$ ../qt6/configure -opengl es2 -qt-host-path $HOME/qt-host -- -DCMAKE_TOOLCHAIN_FILE=$HOME/toolchain.cmake -extprefix $HOME/qt-raspi -prefix /usr/local/qt6
+~/qtpi-build$ ../qt6/configure -opengl es2 \
+-qt-host-path $HOME/qt-host \
+-extprefix $HOME/qt-raspi \
+-prefix /usr/local/qt6 -- \
+-DCMAKE_TOOLCHAIN_FILE=$HOME/toolchain.cmake
 ```
